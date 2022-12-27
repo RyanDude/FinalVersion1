@@ -10,6 +10,6 @@ class Config:
 # configuration of the database
 config = {
     'default': Config,
-    'MYSQL_PASSWORD': 'guoguo841268',
+    'MYSQL_PASSWORD': 'yourpassword',
     'DATABASE_NAME': 'test'
 }
