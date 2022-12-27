@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mentor_homepage</title>
+</head>
+<body>
+<div class="a">
+    <h1>The students matched for you are shown in the table below</h1>
+    <table border="1" style="text-align: center; width: 20%; margin-top: 20px">
+        <tr>
+            <th>Student</th>
+        </tr>
+        {% for result in students %}
+        <tr>
+            <td>{{ result[0] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+</body>
+</html>

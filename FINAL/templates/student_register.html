@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/register-login.css">
+</head>
+<body>
+<div class="cent-box">
+    <div class="cont-main clearfix">
+        <h1>Student Registration</h1>
+        <form method="post">
+            <div class="student register form">
+                <div class="group">
+                    <div class="group-ipt name">
+                        <input type="text" name="std_name" id="std_name" class="ipt"
+                               placeholder="Please enter your name"
+                               required>
+                    </div>
+                    <div class="group-ipt pasword">
+                        <input type="password" name="std_password" id="std_password" class="ipt"
+                               placeholder="Please enter your password"
+                               required>
+                    </div>
+                    <div class="group-ipt email">
+                        <input type="email" name="std_email" id="std_email" class="ipt"
+                               placeholder="Please enter your email" required>
+                    </div>
+                    <div class="group-ipt panther_id">
+                        <input type="text" name="panther_id" id="panther_id" class="ipt"
+                               placeholder="Please enter your panther id" required>
+                    </div>
+                    <div class="group-ipt gender">
+                        <select class="form-select-gender" aria-label="Default select example" name="gender">
+                            <option selected>Please select your gender</option>
+                            <option value="man">man</option>
+                            <option value="woman">woman</option>
+                        </select>
+                    </div>
+                    <div class="group-ipt race">
+                        <select class="form-select-race" aria-label="Default select example" name="race">
+                            <option selected>Please select your race</option>
+                            <option value="black">black</option>
+                            <option value="asian">asian</option>
+                            <option value="white">white</option>
+                        </select>
+                    </div>
+                    <div class="group-ipt field">
+                        <select class="form-select-field" aria-label="Default select example" name="field">
+                            <option selected>Please select your field</option>
+                            {% for field in all_field %}
+                            <option value="{{ field }}"> {{ field[0] }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="group-ipt preference gender">
+                        <select class="form-select-preference-gender" aria-label="Default select example"
+                                name="p_gender">
+                            <option selected>Please select your preferred teacher's gender</option>
+                            <option value="man">man</option>
+                            <option value="woman">woman</option>
+                        </select>
+                    </div>
+                    <div class="group-ipt preference race">
+                        <select class="form-select-preference-race" aria-label="Default select example" name="p_race">
+                            <option selected>Please select your preferred teacher's race</option>
+                            <option value="black">black</option>
+                            <option value="asian">asian</option>
+                            <option value="white">white</option>
+                        </select>
+                    </div>
+                    <div class="group-ipt preference position">
+                        <select class="form-select-preference-position" aria-label="Default select example"
+                                name="p_position">
+                            <option selected>Please select your preferred teacher's position</option>
+                            <option value="professor">professor</option>
+                            <option value="associate professor">associate professor</option>
+                            <option value="lecturer">lecturer</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="button">
+                    <button type="submit" class="student-register-btn" id="button">register</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

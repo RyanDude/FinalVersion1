@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mentor Registration</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/register-login.css">
+</head>
+<body>
+<div class="cent-box">
+    <div class="cont-main clearfix">
+        <h1>Mentor Registration</h1>
+        <form method="post">
+            <div class="mentor register form">
+                <div class="group">
+                    <div class="group-ipt name">
+                        <input type="text" name="mt_name" id="mt_name" class="ipt"
+                               placeholder="Please enter your name"
+                               required>
+                    </div>
+                    <div class="group-ipt pasword">
+                        <input type="password" name="mt_password" id="mt_password" class="ipt"
+                               placeholder="Please enter your password"
+                               required>
+                    </div>
+                    <div class="group-ipt email">
+                        <input type="email" name="mt_email" id="mt_email" class="ipt"
+                               placeholder="Please enter your email" required>
+                    </div>
+                    <div class="group-ipt preference position">
+                        <select class="form-select-position" aria-label="Default select example" name="position">
+                            <option selected>Please select your position</option>
+                            <option value="professor">professor</option>
+                            <option value="associate professor">associate professor</option>
+                            <option value="lecturer">lecturer</option>
+                        </select>
+                    </div>
+                    <div class="group-ipt gender">
+                        <select class="form-select-gender" aria-label="Default select example" name="gender">
+                            <option selected>Please select your gender</option>
+                            <option value="man">man</option>
+                            <option value="woman">woman</option>
+                        </select>
+                    </div>
+                    <div class="group-ipt race">
+                        <select class="form-select-race" aria-label="Default select example" name="race">
+                            <option selected>Please select your race</option>
+                            <option value="black">black</option>
+                            <option value="asian">asian</option>
+                            <option value="white">white</option>
+                        </select>
+                    </div>
+                    <div class="group-ipt field">
+                        <select class="form-select-field" aria-label="Default select example" name="field">
+                            <option selected>Please select your field</option>
+                            {% for field in all_field %}
+                            <option value="{{ field }}"> {{ field[0] }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="group-ipt number">
+                        <input type="text" name="number" id="number" class="ipt"
+                               placeholder="Please enter the number of students you want to bring"
+                               required>
+                    </div>
+                </div>
+                <div class="button">
+                    <button type="submit" class="mentor-register-btn" id="button">register</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

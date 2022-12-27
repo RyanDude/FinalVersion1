@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>manager</title>
+</head>
+<body>
+<h1>To open or close the registration channel, please click the button below</h1>
+<div><a href="{{ url_for('change_status')}}">
+    <button type="button" style="width:300px;height:80px;font-size: 40px">change</button>
+</a>
+</div>
+<h1>Please click the button below to assign students to teachers</h1>
+<div><a href="{{ url_for('relationship_matching')}}">
+    <button type="button" style="width:300px;height:80px;font-size: 40px">assignment</button>
+</a>
+</div>
+<div class="a">
+    <table border="1" style="text-align: center; width: 20%; margin-top: 20px">
+        <tr>
+            <th>Existing field name</th>
+        </tr>
+        {% for field in all_field %}
+        <tr>
+            <td>{{ field[0] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+<div><a href="{{ url_for('delete_field')}}">
+    <button type="button" style="width:300px;height:80px;font-size: 40px;margin-top: 20px">Delete field</button>
+</a>
+</div>
+<div><a href="{{ url_for('add_field')}}">
+    <button type="button" style="width:300px;height:80px;font-size: 40px;margin-top: 20px">Add field</button>
+</a>
+</div>
+</body>
+</html>
